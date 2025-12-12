@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lint Apps — Quality Android Apps</title>
+  <meta name="description" content="Discover our collection of beautifully crafted Android apps. From productivity tools to utility apps, built with care for everyday use.">  <style>
+    :root{--primary:#2196F3;--primary-dark:#1976D2;--accent:#FF8C00;--purple:#9C27B0;--green:#4CAF50;--surface:#ffffff;--dark:#0a0e27;--muted:#757575}
+    *{box-sizing:border-box;margin:0;padding:0}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+    @keyframes glow{0%,100%{box-shadow:0 0 20px rgba(33,150,243,0.3)}50%{box-shadow:0 0 40px rgba(33,150,243,0.6),0 0 60px rgba(33,150,243,0.4)}}
+    @keyframes slide-in{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes gradient-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+    html,body{height:100%;margin:0;font-family:'Segoe UI', system-ui, -apple-system, sans-serif;background:#0a0e27;color:#fff;overflow-x:hidden}
+    .hero{background:linear-gradient(-45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);background-size:400% 400%;animation:gradient-shift 15s ease infinite;color:white;text-align:center;padding:100px 20px 80px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle cx="200" cy="100" r="150" fill="rgba(255,255,255,0.03)"/><circle cx="800" cy="400" r="200" fill="rgba(255,255,255,0.02)"/><circle cx="1000" cy="150" r="100" fill="rgba(255,255,255,0.04)"/></svg>');opacity:0.5;animation:float 20s ease-in-out infinite}
+    .hero h1{font-size:3.5rem;margin:0 0 24px;font-weight:800;text-shadow:0 4px 20px rgba(0,0,0,0.3);animation:slide-in 0.8s ease;letter-spacing:-1px}
+    .hero p{font-size:1.4rem;margin:0 0 40px;opacity:0.95;max-width:700px;margin-left:auto;margin-right:auto;animation:slide-in 1s ease;text-shadow:0 2px 10px rgba(0,0,0,0.2)}
+    .btn{display:inline-flex;align-items:center;gap:12px;background:white;color:#667eea;padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1.1rem;box-shadow:0 8px 30px rgba(0,0,0,0.3);transition:all 0.3s ease;position:relative;overflow:hidden;animation:glow 2s ease-in-out infinite}
+    .btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 12px 40px rgba(102,126,234,0.4)}
+    .btn:active{transform:translateY(-2px) scale(1.02)}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .section{padding:80px 0;animation:slide-in 1s ease}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center}
+    .card{background:linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));backdrop-filter:blur(10px);padding:40px;border-radius:24px;box-shadow:0 8px 32px rgba(0,0,0,0.2);text-align:center;border:1px solid rgba(255,255,255,0.1);transition:all 0.4s ease;position:relative;overflow:hidden}
+    .card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);opacity:0;transition:opacity 0.4s}
+    .card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 16px 48px rgba(102,126,234,0.3)}
+    .card:hover::before{opacity:1}
+    .card h3{color:#fff;margin:0 0 16px;font-size:1.6rem;font-weight:700}
+    .card p{color:rgba(255,255,255,0.8);margin:0 0 24px;line-height:1.7}
+    .feature-icon{width:80px;height:80px;background:linear-gradient(135deg, var(--primary), var(--purple));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:36px;box-shadow:0 8px 24px rgba(102,126,234,0.4);animation:pulse 2s ease-in-out infinite}
+    .app-showcase{background:linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));border-radius:24px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.3);border:2px solid rgba(255,255,255,0.2);transition:all 0.4s ease}
+    .app-showcase:hover{transform:scale(1.05);box-shadow:0 20px 60px rgba(102,126,234,0.4)}
+    .app-showcase img{width:100%;height:auto}
+    .app-info h2{color:#fff;margin:0 0 20px;font-size:2.5rem;font-weight:800;text-shadow:0 2px 10px rgba(0,0,0,0.3)}
+    .app-info p{color:rgba(255,255,255,0.85);margin:0 0 20px;font-size:1.15rem;line-height:1.8}
+    .features{list-style:none;padding:0;margin:24px 0}
+    .features li{padding:12px 0;color:#fff;font-size:1.05rem;transition:all 0.3s}
+    .features li:hover{transform:translateX(10px);color:var(--accent)}
+    .features li:before{content:'✨';margin-right:12px;font-size:1.2rem}
+    .download-section{background:linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);background-size:400% 400%;animation:gradient-shift 15s ease infinite;color:white;text-align:center;padding:80px 20px}
+    .download-section h2{margin:0 0 20px;font-size:2.5rem;font-weight:800;text-shadow:0 4px 20px rgba(0,0,0,0.3)}
+    .download-section p{margin:0 0 40px;font-size:1.2rem;opacity:0.95;text-shadow:0 2px 10px rgba(0,0,0,0.2)}
+    footer{background:rgba(10,14,39,0.95);backdrop-filter:blur(10px);color:white;text-align:center;padding:40px 20px;border-top:1px solid rgba(255,255,255,0.1)}
+    footer p{margin:0;opacity:0.8}
+    .floating{animation:float 6s ease-in-out infinite}
+    .badge{display:inline-block;background:linear-gradient(135deg, var(--accent), #ff6b35);color:white;padding:6px 16px;border-radius:20px;font-size:0.85rem;font-weight:700;margin-top:12px;box-shadow:0 4px 12px rgba(255,140,0,0.4)}
+    @media (max-width:768px){.hero h1{font-size:2.2rem}.section{padding:50px 0}.grid{grid-template-columns:1fr;gap:30px}.btn{padding:14px 28px;font-size:1rem}}
+  </style>
+</head>
+<body>  <div class="hero">
+    <div class="container">
+      <h1 class="floating">🚀 Quality Apps for Everyday Life</h1>
+      <p>We create simple, beautiful Android apps that solve real problems. Discover our collection of carefully crafted tools and utilities designed to make your life easier.</p>
+      <a href="#apps" class="btn">
+        <span>📱</span>
+        Explore Our Apps
+        <span>✨</span>
+      </a>
+    </div>
+  </div>  <div class="section" id="apps" style="background:#0a0e27">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:60px">
+        <h2 style="color:#fff;margin:0 0 20px;font-size:2.5rem;font-weight:800;text-shadow:0 4px 20px rgba(0,0,0,0.3)">✨ Our Android Apps ✨</h2>
+        <p style="color:rgba(255,255,255,0.8);font-size:1.2rem">Thoughtfully designed apps for productivity and convenience</p>
+      </div>
+
+      <!-- Day Counter App -->
+      <div class="grid" style="margin-bottom:64px">
+        <div class="app-showcase">
+          <div style="height:300px;background:linear-gradient(135deg,#e3f2fd,#bbdefb);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:3rem;font-weight:bold">
+            📅
+          </div>
+        </div>
+        <div class="app-info">
+          <h2>Day Counter</h2>
+          <p>Never miss another important date. Track birthdays, anniversaries, holidays, and special events with beautiful countdown timers and home screen widgets.</p>
+          <ul class="features">
+            <li>Beautiful countdown and count-up timers</li>
+            <li>Home screen widgets for quick viewing</li>
+            <li>Customizable notifications and reminders</li>
+            <li>Clean, intuitive interface</li>
+            <li>Supports unlimited events</li>
+          </ul>
+          <a href="https://play.google.com/store/apps/details?id=com.lint.daycounterwidget" class="btn" style="margin-top:16px">
+            <span>📱</span>
+            Download on Google Play
+          </a>
+        </div>
+      </div>
+
+      <!-- Coming Soon Apps -->
+      <div style="text-align:center;margin-bottom:48px">
+        <h3 style="color:var(--primary);margin:0 0 32px;font-size:1.5rem">Coming Soon</h3>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#4CAF50,#388E3C)">📝</div>
+          <h3>Quick Notes</h3>
+          <p>Simple, fast note-taking with instant sync. Perfect for capturing thoughts on the go.</p>
+          <small style="color:var(--accent);font-weight:600">In Development</small>
+        </div>
+        
+        <div class="card">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#FF9800,#F57C00)">🔧</div>
+          <h3>System Tools</h3>
+          <p>Essential utilities for managing your Android device. Clean, optimize, and monitor with ease.</p>
+          <small style="color:var(--accent);font-weight:600">Planning Stage</small>
+        </div>
+
+        <div class="card">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#9C27B0,#7B1FA2)">💰</div>
+          <h3>Budget Tracker</h3>
+          <p>Simple expense tracking and budgeting. Keep your finances organized without complexity.</p>
+          <small style="color:var(--accent);font-weight:600">Concept</small>
+        </div>
+      </div>
+    </div>
+  </div>  <div class="section" style="background:white">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:48px">
+        <h2 style="color:var(--primary);margin:0 0 16px;font-size:2rem">Why Choose Our Apps?</h2>
+        <p style="color:var(--muted);font-size:1.1rem">We focus on quality, simplicity, and user experience</p>
+      </div>
+      <div class="grid">
+        <div class="card" style="background:linear-gradient(135deg, #f5f7fa, #ffffff);border:2px solid #e0e6ed">
+          <div class="feature-icon">🎨</div>
+          <h3 style="color:var(--dark)">Beautiful Design</h3>
+          <p style="color:#555">Clean, modern interfaces that follow Material Design principles. Every pixel is carefully considered.</p>
+        </div>
+        <div class="card" style="background:linear-gradient(135deg, #f5f7fa, #ffffff);border:2px solid #e0e6ed">
+          <div class="feature-icon">⚡</div>
+          <h3 style="color:var(--dark)">Fast & Lightweight</h3>
+          <p style="color:#555">Optimized for performance with minimal battery usage. Quick startup times and smooth animations.</p>
+        </div>
+        <div class="card" style="background:linear-gradient(135deg, #f5f7fa, #ffffff);border:2px solid #e0e6ed">
+          <div class="feature-icon">🔒</div>
+          <h3 style="color:var(--dark)">Privacy First</h3>
+          <p style="color:#555">Your data stays on your device. We don't collect unnecessary information or show intrusive ads.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:48px">
+        <h2 style="color:var(--primary);margin:0 0 16px;font-size:2rem">See It At A Glance</h2>
+        <p style="color:var(--muted);font-size:1.1rem">Add widgets to your home screen and never lose track</p>
+      </div>
+      <div class="grid">
+        <div style="text-align:center">
+          <div style="width:200px;height:120px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;margin:0 auto 24px;box-shadow:0 8px 24px rgba(33,150,243,0.3)">
+            <div style="font-size:2rem;font-weight:bold">45</div>
+            <div style="font-size:0.9rem;opacity:0.9">days to go</div>
+            <div style="font-size:0.8rem;opacity:0.7;margin-top:4px">Christmas</div>
+          </div>
+          <h3 style="color:var(--primary)">Home Screen Widget</h3>
+          <p style="color:var(--muted)">Keep your most important countdowns visible on your home screen</p>
+        </div>
+        <div style="text-align:center">
+          <div style="width:200px;height:120px;background:white;border:2px solid #e0e0e0;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 24px">
+            <div style="color:var(--accent);font-size:2rem;font-weight:bold">127</div>
+            <div style="color:var(--accent);font-size:0.9rem">days since</div>
+            <div style="color:var(--muted);font-size:0.8rem;margin-top:4px">New Job</div>
+          </div>
+          <h3 style="color:var(--primary)">Count Up Too</h3>
+          <p style="color:var(--muted)">Track how many days have passed since important milestones</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section download-section">
+    <div class="container">
+      <h2>Stay Updated</h2>
+      <p>Follow us for updates on new apps and features. More quality apps coming soon!</p>
+      <a href="https://play.google.com/store/apps/developer?id=Lint+Apps" class="btn">
+        <span>📱</span>
+        View All Our Apps
+      </a>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Lint Apps. Crafting quality Android experiences since 2025.</p>
+      <p style="margin-top:8px;font-size:0.9rem">
+        <a href="mailto:lintcodes@gmail.com" style="color:#ccc;text-decoration:none">Contact Us</a> • 
+        <a href="NUD-privacy-policy.html" style="color:#ccc;text-decoration:none">Privacy Policy</a> • 
+        <a href="https://play.google.com/store/apps/developer?id=Lint+apps" style="color:#ccc;text-decoration:none">Google Play</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
