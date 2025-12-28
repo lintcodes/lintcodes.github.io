@@ -22,7 +22,7 @@
     .btn:active{transform:translateY(-2px) scale(1.02)}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
     .section{padding:80px 0;animation:slide-in 1s ease}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;}
     .card{background:linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));backdrop-filter:blur(10px);padding:40px;border-radius:24px;box-shadow:0 8px 32px rgba(0,0,0,0.2);text-align:center;border:1px solid rgba(255,255,255,0.1);transition:all 0.4s ease;position:relative;overflow:hidden}
     .card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);opacity:0;transition:opacity 0.4s}
     .card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 16px 48px rgba(102,126,234,0.3)}
@@ -30,7 +30,7 @@
     .card h3{color:#fff;margin:0 0 16px;font-size:1.6rem;font-weight:700}
     .card p{color:rgba(255,255,255,0.8);margin:0 0 24px;line-height:1.7}
     .feature-icon{width:80px;height:80px;background:linear-gradient(135deg, var(--primary), var(--purple));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:36px;box-shadow:0 8px 24px rgba(102,126,234,0.4);animation:pulse 2s ease-in-out infinite}
-    .app-showcase{background:linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));border-radius:24px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.3);border:2px solid rgba(255,255,255,0.2);transition:all 0.4s ease}
+    .app-showcase{margin-top: 30px;background:linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));border-radius:24px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.3);border:2px solid rgba(255,255,255,0.2);transition:all 0.4s ease;height:fit-content}
     .app-showcase:hover{transform:scale(1.05);box-shadow:0 20px 60px rgba(102,126,234,0.4)}
     .app-showcase img{width:100%;height:auto}
     .app-info h2{color:#fff;margin:0 0 20px;font-size:2.5rem;font-weight:800;text-shadow:0 2px 10px rgba(0,0,0,0.3)}
@@ -69,8 +69,9 @@
       <!-- Day Counter App -->
       <div class="grid" style="margin-bottom:64px">
         <div class="app-showcase">
-          <div style="height:300px;background:linear-gradient(135deg,#e3f2fd,#bbdefb);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:3rem;font-weight:bold">
-            📅
+          <!-- App logo / hero image: copy your logo to app/assets/lint_notes_logo.png -->
+          <div style="height:360px;display:flex;align-items:center;justify-content:center;padding:20px;background:white;">
+            <img src="assets/day-counter/logo.png" alt="Day Counter logo" style="max-width:60%;height:auto;object-fit:contain;border-radius:16px;" />
           </div>
         </div>
         <div class="app-info">
@@ -83,9 +84,74 @@
             <li>Clean, intuitive interface</li>
             <li>Supports unlimited events</li>
           </ul>
+          <!-- See It At A Glance: now part of the Day Counter info card -->
+          <div style="background:white;color:#111;padding:18px;border-radius:12px;margin-top:20px">
+            <div style="text-align:left;margin-bottom:10px">
+              <h3 style="color:var(--primary);margin:0 0 6px;font-size:1.25rem">See It At A Glance</h3>
+              <p style="color:#666;margin:0 0 12px">Add widgets to your home screen and never lose track</p>
+            </div>
+            <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:12px;">
+              <div style="text-align:center">
+                <div style="width:100%;height:100px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;margin:0 auto 12px;box-shadow:0 8px 24px rgba(33,150,243,0.12)">
+                  <div style="font-size:1.6rem;font-weight:700">45</div>
+                  <div style="font-size:0.9rem;opacity:0.95">days to go</div>
+                </div>
+                <div style="font-weight:700;color:var(--primary);">Home Screen Widget</div>
+                <div style="color:#666;font-size:0.95rem">Keep your most important countdowns visible</div>
+              </div>
+              <div style="text-align:center">
+                <div style="width:100%;height:100px;background:#fff;border:1px solid #e6e6e6;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 12px">
+                  <div style="color:var(--accent);font-size:1.6rem;font-weight:700">127</div>
+                  <div style="font-size:0.9rem;color:var(--accent)">days since</div>
+                </div>
+                <div style="font-weight:700;color:var(--primary);">Count Up</div>
+                <div style="color:#666;font-size:0.95rem">Track how many days have passed since milestones</div>
+              </div>
+            </div>
+          </div>
           <a href="https://play.google.com/store/apps/details?id=com.lint.daycounterwidget" class="btn" style="margin-top:16px">
             <span>📱</span>
             Download on Google Play
+          </a>
+        </div>
+      </div>
+
+      <!-- Lint notes App -->
+      <div class="grid" style="margin-bottom:64px">
+        <div class="app-showcase">
+          <!-- App logo / hero image: copy your logo to app/assets/lint_notes_logo.png -->
+          <div style="height:360px;display:flex;align-items:center;justify-content:center;padding:20px;background:white;">
+            <img src="assets/notes/logo.jpg" alt="Lint notes logo" style="max-width:60%;height:auto;object-fit:contain;border-radius:16px;" />
+          </div>
+        </div>
+        <div class="app-info">
+          <h2>Lint notes</h2>
+          <p>Simple, focused note-taking with Collections (books), text & checklist notes, inline images, a lightweight drawing canvas and optional Google Drive backup.</p>
+
+          <!-- Inline mock screenshots grid -->
+          <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0">
+            <div class="app-showcase" style="padding:6px">
+              <img src="assets/screenshot1.png" alt="Lint notes screenshot - Collections" style="width:100%;height:140px;object-fit:cover;border-radius:12px;display:block" />
+            </div>
+            <div class="app-showcase" style="padding:6px">
+              <img src="assets/screenshot2.png" alt="Lint notes screenshot - Editor with image" style="width:100%;height:140px;object-fit:cover;border-radius:12px;display:block" />
+            </div>
+            <div class="app-showcase" style="padding:6px">
+              <img src="assets/screenshot3.png" alt="Lint notes screenshot - Checklist & drawing" style="width:100%;height:140px;object-fit:cover;border-radius:12px;display:block" />
+            </div>
+          </div>
+
+          <ul class="features">
+            <li>Collections to group notes like books</li>
+            <li>Text & Checklist note types with rounded checkboxes</li>
+            <li>Inline images and a lightweight drawing canvas</li>
+            <li>Auto-save editor and optional Google Drive backup</li>
+            <li>Opt-in rewarded ads for freemium gating; respectful top banners</li>
+          </ul>
+
+          <a href="https://play.google.com/store/apps/details?id=com.lint.notes" class="btn" style="margin-top:8px">
+            <span>📱</span>
+            Download Lint notes on Google Play
           </a>
         </div>
       </div>
@@ -94,12 +160,6 @@
       <div style="text-align:center;margin-bottom:48px">
         <h3 style="color:var(--primary);margin:0 0 32px;font-size:1.5rem">Coming Soon</h3>
       </div>      <div class="grid">
-        <div class="card">
-          <div class="feature-icon" style="background:linear-gradient(135deg,#4CAF50,#388E3C)">📝</div>
-          <h3>Quick Notes</h3>
-          <p>Simple, fast note-taking with instant sync. Perfect for capturing thoughts on the go.</p>
-          <small style="color:var(--accent);font-weight:600">In Development</small>
-        </div>
 
         <div class="card">
           <div class="feature-icon" style="background:linear-gradient(135deg,#9C27B0,#7B1FA2)">💰</div>
@@ -130,35 +190,6 @@
           <div class="feature-icon">🔒</div>
           <h3 style="color:var(--dark)">Privacy First</h3>
           <p style="color:#555">Your data stays on your device. We don't collect unnecessary information or show intrusive ads.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:48px">
-        <h2 style="color:var(--primary);margin:0 0 16px;font-size:2rem">See It At A Glance</h2>
-        <p style="color:var(--muted);font-size:1.1rem">Add widgets to your home screen and never lose track</p>
-      </div>
-      <div class="grid">
-        <div style="text-align:center">
-          <div style="width:200px;height:120px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;margin:0 auto 24px;box-shadow:0 8px 24px rgba(33,150,243,0.3)">
-            <div style="font-size:2rem;font-weight:bold">45</div>
-            <div style="font-size:0.9rem;opacity:0.9">days to go</div>
-            <div style="font-size:0.8rem;opacity:0.7;margin-top:4px">Christmas</div>
-          </div>
-          <h3 style="color:var(--primary)">Home Screen Widget</h3>
-          <p style="color:var(--muted)">Keep your most important countdowns visible on your home screen</p>
-        </div>
-        <div style="text-align:center">
-          <div style="width:200px;height:120px;background:white;border:2px solid #e0e0e0;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 24px">
-            <div style="color:var(--accent);font-size:2rem;font-weight:bold">127</div>
-            <div style="color:var(--accent);font-size:0.9rem">days since</div>
-            <div style="color:var(--muted);font-size:0.8rem;margin-top:4px">New Job</div>
-          </div>
-          <h3 style="color:var(--primary)">Count Up Too</h3>
-          <p style="color:var(--muted)">Track how many days have passed since important milestones</p>
         </div>
       </div>
     </div>
