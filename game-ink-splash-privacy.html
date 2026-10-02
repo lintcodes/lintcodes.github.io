@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ink Splash Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+  :root {
+    color-scheme: light dark;
+    --paper: #f7f1e4;
+    --paper-raised: #fbf7ee;
+    --ink: #241f1a;
+    --muted: #6b6255;
+    --rule: #ddd3c1;
+    --accent: #7d5f2c;
+    --accent-soft: #e9dcc0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #141210;
+      --paper-raised: #1b1815;
+      --ink: #ece4d4;
+      --muted: #a69c8c;
+      --rule: #3a342c;
+      --accent: #c9a96a;
+      --accent-soft: #2c2719;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #141210;
+    --paper-raised: #1b1815;
+    --ink: #ece4d4;
+    --muted: #a69c8c;
+    --rule: #3a342c;
+    --accent: #c9a96a;
+    --accent-soft: #2c2719;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    padding: 0 20px;
+  }
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-block: 48px 80px;
+  }
+
+  .letterhead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 36px;
+  }
+  .brand {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+  .brand .dot { color: var(--accent); }
+  .effective-date {
+    font-size: 13px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+  .standfirst {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 54ch;
+    margin: 0 0 40px;
+  }
+
+  nav.toc {
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin-bottom: 44px;
+  }
+  nav.toc .toc-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 24px;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 6px; }
+  nav.toc a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+  }
+  nav.toc a:hover { border-bottom-color: var(--accent); }
+  nav.toc .num { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 6px; }
+
+  section { scroll-margin-top: 20px; margin-bottom: 38px; }
+  section + section { padding-top: 38px; border-top: 1px solid var(--rule); }
+
+  .section-eyebrow {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .section-eyebrow .num {
+    font-family: "Source Serif 4", Georgia, serif;
+    color: var(--accent);
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+  }
+  h2 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 21px;
+    margin: 0;
+  }
+
+  p { margin: 0 0 14px; max-width: 68ch; }
+  ul { margin: 0 0 14px; padding-left: 22px; max-width: 64ch; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  img { max-width: 100%; }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 20px;
+    font-size: 14.5px;
+  }
+  table.data-table th, table.data-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  table.data-table th {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    padding: 2px 9px;
+    border-radius: 99px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .callout {
+    background: var(--paper-raised);
+    border-left: 3px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 4px 4px 0;
+    font-size: 14.5px;
+    color: var(--muted);
+    margin: 16px 0;
+  }
+  .callout strong { color: var(--ink); }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 480px) {
+    nav.toc ol { columns: 1; }
+    .letterhead { flex-direction: column; align-items: flex-start; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="letterhead">
+    <div class="brand">INK SPLASH<span class="dot">.</span></div>
+    <div class="effective-date">Effective October 3, 2026</div>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <p class="standfirst">
+    This describes exactly what Ink Splash collects, what it doesn't, and why — section by
+    section, with no clause describing something the app doesn't actually do.
+  </p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">On this page</div>
+    <ol>
+      <li><a href="#overview"><span class="num">1.</span>Overview</a></li>
+      <li><a href="#not-collected"><span class="num">2.</span>What we don't collect</a></li>
+      <li><a href="#ads"><span class="num">3.</span>Advertising (Google AdMob)</a></li>
+      <li><a href="#leaderboard"><span class="num">4.</span>Leaderboards (Google Play Games)</a></li>
+      <li><a href="#local"><span class="num">5.</span>Data stored on your device</a></li>
+      <li><a href="#purchases"><span class="num">6.</span>Purchases</a></li>
+      <li><a href="#permissions"><span class="num">7.</span>App permissions</a></li>
+      <li><a href="#children"><span class="num">8.</span>Children's privacy</a></li>
+      <li><a href="#choices"><span class="num">9.</span>Your choices</a></li>
+      <li><a href="#changes"><span class="num">10.</span>Changes &amp; contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="overview">
+    <div class="section-eyebrow"><span class="num">01</span><h2>Overview</h2></div>
+    <p>
+      Ink Splash is a single-player tapping game. You can play it start to finish without creating
+      an account, entering your name, or giving us an email address — we don't ask for any of
+      those, because the game doesn't need them.
+    </p>
+    <p>
+      The sections below cover the only two ways information moves anywhere near a network from
+      this app: the advertising SDK that shows interstitial and rewarded video ads, and the
+      optional leaderboard feature. Everything else the app remembers about you — your best score,
+      your streak, your settings — stays on your device.
+    </p>
+  </section>
+
+  <section id="not-collected">
+    <div class="section-eyebrow"><span class="num">02</span><h2>What we don't collect</h2></div>
+    <p>Ink Splash never asks for, and has no code path to request:</p>
+    <ul>
+      <li>Your name, email address, phone number, or physical address</li>
+      <li>Your precise or approximate location</li>
+      <li>Camera, microphone, contacts, photos, or files on your device</li>
+      <li>Any payment card details (purchases, if you make one, are handled entirely by Google Play — see §6)</li>
+    </ul>
+  </section>
+
+  <section id="ads">
+    <div class="section-eyebrow"><span class="num">03</span><h2>Advertising — Google AdMob</h2></div>
+    <p>
+      Ink Splash shows ads between levels and as an optional way to continue a run (a short video
+      you choose to watch). These are served by <strong>Google AdMob</strong>, a third-party
+      advertising SDK built into the app.
+    </p>
+    <p>
+      To select, deliver, measure, and protect against fraudulent ads, AdMob automatically
+      collects information on its own — independent of anything Ink Splash's own code does:
+    </p>
+    <table class="data-table">
+      <tr><th>Data</th><th>Why</th></tr>
+      <tr><td>Advertising ID and device identifiers</td><td>Frequency capping, fraud prevention, ad measurement</td></tr>
+      <tr><td>IP address, general device &amp; network info</td><td>Serving an ad that works on your device, approximate region</td></tr>
+      <tr><td>Ad interaction data (views, clicks, completions)</td><td>Billing advertisers correctly, reporting</td></tr>
+    </table>
+    <p>
+      This data is handled under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
+      and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob's data disclosure</a> — Ink Splash's
+      developer does not receive or store it. During testing and development builds, AdMob is
+      configured to serve only Google's publicly documented test ads, which carry no real
+      advertiser data.
+    </p>
+    <div class="callout">
+      <strong>Your controls:</strong> on Android, go to <em>Settings → Google → Ads</em> to reset
+      your advertising ID or opt out of personalized ads for every app, including this one.
+    </div>
+  </section>
+
+  <section id="leaderboard">
+    <div class="section-eyebrow"><span class="num">04</span><h2>Leaderboards — Google Play Games</h2></div>
+    <p>
+      Ink Splash includes optional support for Google Play Games leaderboards. If this feature is
+      turned on in a future update and you choose to sign in, your score, level, and win streak
+      are submitted to a leaderboard under your Google Play Games profile (display name and
+      avatar) — never your name or email directly. Signing in is always your choice; the game is
+      fully playable without it, and if you never sign in, nothing is submitted anywhere.
+    </p>
+    <p>This feature is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> when active.</p>
+  </section>
+
+  <section id="local">
+    <div class="section-eyebrow"><span class="num">05</span><h2>Data stored on your device</h2></div>
+    <p>
+      Ink Splash keeps a small amount of data locally, in your device's private app storage —
+      never uploaded to us or anyone else:
+    </p>
+    <ul>
+      <li>Your best score and current win streak</li>
+      <li>Whether sound is muted, and whether you've completed the tutorial</li>
+      <li>Daily challenge progress (the date you last played, and that day's result)</li>
+      <li>Whether you've bought the ad-free Supporter upgrade, and any continue credits — see §6</li>
+    </ul>
+    <p>
+      This is deleted automatically if you uninstall Ink Splash, or manually from
+      <em>Settings → Apps → Ink Splash → Storage → Clear storage</em>.
+    </p>
+  </section>
+
+  <section id="purchases">
+    <div class="section-eyebrow"><span class="num">06</span><h2>Purchases</h2></div>
+    <p>
+      Ink Splash offers an optional one-time Supporter purchase that removes full-screen ads.
+      Every part of that transaction — your payment method, billing address, purchase history —
+      is handled directly by Google Play's billing system. We never see or store your payment
+      details; the app only learns whether the purchase succeeded, so it can unlock the feature.
+    </p>
+    <p>
+      See <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener">Google Payments' Privacy Notice</a> for how Google Play handles that information.
+    </p>
+  </section>
+
+  <section id="permissions">
+    <div class="section-eyebrow"><span class="num">07</span><h2>App permissions</h2></div>
+    <p>Ink Splash requests exactly two Android permissions, both standard for any app that loads ads:</p>
+    <table class="data-table">
+      <tr><th>Permission</th><th>Used for</th></tr>
+      <tr><td><span class="pill">INTERNET</span></td><td>Loading ads and, if enabled, submitting leaderboard scores</td></tr>
+      <tr><td><span class="pill">ACCESS_NETWORK_STATE</span></td><td>Checking connectivity before attempting either of the above</td></tr>
+    </table>
+    <p>Ink Splash does not request location, camera, microphone, contacts, storage, or any other permission.</p>
+  </section>
+
+  <section id="children">
+    <div class="section-eyebrow"><span class="num">08</span><h2>Children's privacy</h2></div>
+    <p>
+      Ink Splash is not directed at children under 13, and we do not knowingly collect personal
+      information from them. If that changes in a future version aimed at a younger audience,
+      this policy — and the app's ad configuration — will be updated accordingly before that
+      version ships.
+    </p>
+  </section>
+
+  <section id="choices">
+    <div class="section-eyebrow"><span class="num">09</span><h2>Your choices</h2></div>
+    <ul>
+      <li><strong>Ads:</strong> reset or opt out of ad personalization in <em>Settings → Google → Ads</em>.</li>
+      <li><strong>Leaderboards:</strong> simply don't sign in with Google Play Games — every other feature still works.</li>
+      <li><strong>Everything stored locally:</strong> uninstall the app, or clear its storage from Android Settings, to remove it immediately.</li>
+    </ul>
+  </section>
+
+  <section id="changes">
+    <div class="section-eyebrow"><span class="num">10</span><h2>Changes &amp; contact</h2></div>
+    <p>
+      If this policy changes, the new version will be posted at this same page with an updated
+      effective date above. Questions about this policy or how Ink Splash handles data can be
+      sent to the address below.
+    </p>
+    <p><a href="mailto:lintcodes@gmail.com">lintcodes@gmail.com</a></p>
+  </section>
+
+  <footer>
+    Ink Splash — a single-player tapping game for Android.
+  </footer>
+
+</div>
+</body>
+</html>
